@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicles - Workshop Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body onload="loadVehicles()">
+    <aside>
+        <h1>WorkshopAdmin</h1>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="customers.html">Customers</a>
+            <a href="vehicles.html" class="active">Vehicles</a>
+            <a href="services.html">Services</a>
+        </nav>
+    </aside>
+    <main>
+        <header>
+            <h2>Vehicles</h2>
+            <button class="btn btn-primary" onclick="openModal('vehicleModal')">+ New Vehicle</button>
+        </header>
+
+        <div class="card">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>License Plate</th>
+                            <th>Model</th>
+                            <th>Owner ID</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="vehicleTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal" id="vehicleModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add Vehicle</h3>
+                <span class="close-btn" onclick="closeModal('vehicleModal')">&times;</span>
+            </div>
+            <form onsubmit="createVehicle(event)">
+                <label>License Plate</label>
+                <input type="text" id="vLicense" required>
+                <label>Model</label>
+                <input type="text" id="vModel" required>
+                <label>Owner ID (Customer ID)</label>
+                <input type="number" id="vOwner" required>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

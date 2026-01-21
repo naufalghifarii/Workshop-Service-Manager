@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Workshop Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body onload="loadServices()">
+    <aside>
+        <h1>WorkshopAdmin</h1>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="customers.html">Customers</a>
+            <a href="vehicles.html">Vehicles</a>
+            <a href="services.html" class="active">Services</a>
+        </nav>
+    </aside>
+    <main>
+        <header>
+            <h2>Services</h2>
+            <button class="btn btn-primary" onclick="openModal('serviceModal')">+ New Service</button>
+        </header>
+
+        <div class="card">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Cost</th>
+                            <th>Vehicle ID</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="serviceTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Record Service</h3>
+                <span class="close-btn" onclick="closeModal('serviceModal')">&times;</span>
+            </div>
+            <form onsubmit="createService(event)">
+                <label>Description</label>
+                <input type="text" id="sDesc" required>
+                <label>Cost</label>
+                <input type="number" step="0.01" id="sCost" required>
+                <label>Vehicle ID</label>
+                <input type="number" id="sVehicle" required>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

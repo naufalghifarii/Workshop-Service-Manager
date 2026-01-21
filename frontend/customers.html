@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers - Workshop Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body onload="loadCustomers()">
+    <aside>
+        <h1>WorkshopAdmin</h1>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="customers.html" class="active">Customers</a>
+            <a href="vehicles.html">Vehicles</a>
+            <a href="services.html">Services</a>
+        </nav>
+    </aside>
+    <main>
+        <header>
+            <h2>Customers</h2>
+            <button class="btn btn-primary" onclick="openModal('customerModal')">+ New Customer</button>
+        </header>
+
+        <div class="card">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="customerTableBody">
+                        <!-- Data populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal" id="customerModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add Customer</h3>
+                <span class="close-btn" onclick="closeModal('customerModal')">&times;</span>
+            </div>
+            <form onsubmit="createCustomer(event)">
+                <label>Name</label>
+                <input type="text" id="cName" required>
+                <label>Email</label>
+                <input type="email" id="cEmail" required>
+                <label>Phone</label>
+                <input type="text" id="cPhone">
+                <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

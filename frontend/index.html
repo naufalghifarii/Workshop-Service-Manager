@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <aside>
+        <h1>WorkshopAdmin</h1>
+        <nav>
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="customers.html">Customers</a>
+            <a href="vehicles.html">Vehicles</a>
+            <a href="services.html">Services</a>
+        </nav>
+    </aside>
+    <main>
+        <header>
+            <h2>Dashboard</h2>
+            <button class="btn btn-primary" onclick="alert('Welcome!')">Refresh Data</button>
+        </header>
+
+        <div class="card">
+            <h3>Welcome to Workshop Service Manager</h3>
+            <p>Select a section from the sidebar to manage your workshop.</p>
+        </div>
+        
+        <div class="card">
+            <h3>Quick Stats</h3>
+            <p>Check the Grafana Dashboard for detailed metrics.</p>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
