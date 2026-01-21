@@ -58,11 +58,11 @@ Aplikasi manajemen bengkel berbasis microservices dengan monitoring menggunakan 
 git clone <url-repositori-anda>
 cd workshop-service-manager
 ```
-###▶️ Langkah 2: Jalankan Semua Layanan
+### ▶️ Langkah 2: Jalankan Semua Layanan
 ```bash
 docker-compose up -d
 ```
-▶️ Langkah 3: Akses Aplikasi
+### ▶️ Langkah 3: Akses Aplikasi
 - Frontend (UI): http://localhost:8085
 - Backend API: http://localhost:5000/api
 Contoh endpoint:
